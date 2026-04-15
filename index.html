@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Code Beauté - Manon | Conseillère Chogan</title>
+  <meta name="description" content="Déchiffrez votre code beauté avec Manon, conseillère Chogan. Diagnostics parfum et visage personnalisés. Soins d'exception Made in Italy.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23D4A59A'/%3E%3Ctext x='50' y='70' font-size='50' text-anchor='middle' fill='white' font-family='serif'%3ECB%3C/text%3E%3C/svg%3E">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FDFBF9;
+      color: #3E3E3E;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(212, 165, 154, 0.2);
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #D4A59A;
+      text-decoration: none;
+    }
+
+    .logo i {
+      font-size: 22px;
+      margin-right: 8px;
+      color: #C28B7B;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #5A5A5A;
+      font-weight: 400;
+      font-size: 16px;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover {
+      color: #D4A59A;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #D4A59A;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(212, 165, 154, 0.08) 0%, rgba(253, 251, 249, 0) 100%);
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 10px 30px rgba(212, 165, 154, 0.2);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: #D4A59A;
+      margin-bottom: 8px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .hero .subtitle {
+      font-size: 20px;
+      color: #8B8B8B;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    .hero .tagline {
+      font-size: 24px;
+      color: #3E3E3E;
+      margin-bottom: 32px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #D4A59A;
+      color: white;
+      text-decoration: none;
+      padding: 14px 36px;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 16px;
+      transition: all 0.3s;
+      border: 1px solid #D4A59A;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #C28B7B;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(212, 165, 154, 0.3);
+    }
+
+    /* Features */
+    .features {
+      padding: 60px 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+
+    .feature {
+      padding: 30px 20px;
+    }
+
+    .feature i {
+      font-size: 36px;
+      color: #D4A59A;
+      margin-bottom: 20px;
+    }
+
+    .feature h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #3E3E3E;
+    }
+
+    .feature p {
+      color: #8B8B8B;
+      font-size: 15px;
+    }
+
+    /* Diagnostics Section */
+    .diagnostics {
+      padding: 60px 0;
+      background-color: #F8F5F2;
+      border-radius: 60px 60px 0 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #3E3E3E;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #8B8B8B;
+      font-size: 18px;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .diag-card {
+      background: white;
+      border-radius: 32px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+      border: 1px solid rgba(212, 165, 154, 0.15);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .diag-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(212, 165, 154, 0.15);
+      border-color: #D4A59A;
+    }
+
+    .diag-card i {
+      font-size: 48px;
+      color: #D4A59A;
+      margin-bottom: 24px;
+    }
+
+    .diag-card h3 {
+      font-size: 26px;
+      margin-bottom: 16px;
+      color: #3E3E3E;
+    }
+
+    .diag-card p {
+      color: #8B8B8B;
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+
+    .diag-card .btn {
+      margin-top: 10px;
+    }
+
+    /* Modal pour les diagnostics */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px 20px 0 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(212, 165, 154, 0.2);
+      background: white;
+    }
+
+    .modal-header h3 {
+      font-size: 20px;
+      color: #3E3E3E;
+    }
+
+    .close-modal {
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: #D4A59A;
+      cursor: pointer;
+      padding: 0 8px;
+      transition: color 0.2s;
+    }
+
+    .close-modal:hover {
+      color: #C28B7B;
+    }
+
+    .modal-body {
+      flex: 1;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .modal-body iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      min-height: 600px;
+    }
+
+    /* About Section */
+    .about {
+      padding: 80px 0;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about h2 {
+      font-size: 32px;
+      color: #D4A59A;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .about h3 {
+      font-size: 22px;
+      color: #3E3E3E;
+      margin: 30px 0 15px;
+    }
+
+    .about p {
+      margin-bottom: 20px;
+      color: #5A5A5A;
+      font-size: 16px;
+    }
+
+    .signature {
+      margin-top: 40px;
+      text-align: right;
+      font-style: italic;
+      color: #D4A59A;
+      font-size: 20px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 60px 0;
+      background-color: #F8F5F2;
+      text-align: center;
+      border-radius: 0 0 60px 60px;
+    }
+
+    .contact h2 {
+      font-size: 32px;
+      color: #3E3E3E;
+      margin-bottom: 40px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: #3E3E3E;
+      font-weight: 500;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s;
+      border: 1px solid rgba(212, 165, 154, 0.2);
+    }
+
+    .contact-btn i {
+      font-size: 22px;
+      color: #D4A59A;
+    }
+
+    .contact-btn:hover {
+      background: #D4A59A;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .contact-btn:hover i {
+      color: white;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+      border-color: #25D366;
+    }
+
+    .whatsapp-btn i {
+      color: white;
+    }
+
+    .whatsapp-btn:hover {
+      background: #128C7E;
+    }
+
+    .instagram-btn {
+      background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+      color: white;
+      border: none;
+    }
+
+    .instagram-btn i {
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid rgba(212, 165, 154, 0.15);
+      margin-top: 20px;
+    }
+
+    .footer-text {
+      color: #8B8B8B;
+      font-size: 14px;
+    }
+
+    .footer-text a {
+      color: #D4A59A;
+      text-decoration: none;
+    }
+
+    .legal {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #A0A0A0;
+    }
+
+    /* RGPD */
+    .rgpd {
+      max-width: 600px;
+      margin: 20px auto 0;
+      padding: 15px 20px;
+      background: rgba(212, 165, 154, 0.08);
+      border-radius: 16px;
+      font-size: 12px;
+      color: #8B8B8B;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .rgpd i {
+      color: #D4A59A;
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero .subtitle {
+        font-size: 18px;
+      }
+
+      .hero .tagline {
+        font-size: 20px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .cards-container {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-img {
+        width: 130px;
+        height: 130px;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      .about h2 {
+        font-size: 28px;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
+
+      .modal-content {
+        margin-top: 20px;
+        border-radius: 16px 16px 0 0;
+      }
+
+      .modal-body iframe {
+        min-height: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container header-content">
+    <a href="#" class="logo">
+      <i class="fas fa-leaf"></i> Code Beauté
+    </a>
+    <nav class="nav-links">
+      <a href="#">Accueil</a>
+      <a href="#about">À propos</a>
+      <a href="#diagnostics">Diagnostics</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="mobile-menu-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <img src="https://i.ibb.co/7t9ct10r/IMG-7455.jpg" alt="Manon - Code Beauté" class="profile-img">
+    <h1>Manon</h1>
+    <p class="subtitle">Conseillère Beauté et Bien-être Chogan</p>
+    <p class="tagline">Déchiffrez votre code beauté avec des soins d'exception et des conseils personnalisés.</p>
+    <a href="#diagnostics" class="btn">Découvrir mes diagnostics <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="features container">
+  <div class="feature">
+    <i class="fas fa-flask"></i>
+    <h3>Expertise Chogan</h3>
+    <p>Des formulations d'exception Made in Italy</p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-heart"></i>
+    <h3>Conseils personnalisés</h3>
+    <p>Une approche sur-mesure pour votre beauté</p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-leaf"></i>
+    <h3>Produits naturels</h3>
+    <p>Des actifs nobles pour votre peau</p>
+  </div>
+</section>
+
+<!-- Diagnostics Section -->
+<section id="diagnostics" class="diagnostics">
+  <div class="container">
+    <div class="section-title">
+      <h2>Vos diagnostics personnalisés</h2>
+      <p>Cliquez sur une carte pour lancer le diagnostic directement ici</p>
+    </div>
+    <div class="cards-container">
+      <div class="diag-card" onclick="openModal('parfum')">
+        <i class="fas fa-spray-can-sparkles"></i>
+        <h3>Diagnostic Parfum</h3>
+        <p>Trouvez votre signature olfactive parmi les fragrances iconiques Chogan.</p>
+        <span class="btn">Commencer le test <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="diag-card" onclick="openModal('peau')">
+        <i class="fas fa-droplet"></i>
+        <h3>Diagnostic Visage</h3>
+        <p>Obtenez votre routine visage personnalisée selon votre type de peau.</p>
+        <span class="btn">Commencer le test <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Parfum -->
+<div id="modal-parfum" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3><i class="fas fa-spray-can-sparkles" style="margin-right: 8px; color: #D4A59A;"></i> Diagnostic Parfum</h3>
+      <button class="close-modal" onclick="closeModal('parfum')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <iframe src="https://codebeautediagparfum.zite.so" allow="clipboard-write" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Peau -->
+<div id="modal-peau" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3><i class="fas fa-droplet" style="margin-right: 8px; color: #D4A59A;"></i> Diagnostic Visage</h3>
+      <button class="close-modal" onclick="closeModal('peau')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <iframe src="https://codebeautediagpeau.zite.so" allow="clipboard-write" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- About Section -->
+<section id="about" class="about">
+  <div class="container about-content">
+    <h2>Qui se cache derrière Code Beauté ?</h2>
+    
+    <p>Je m'appelle Manon, et Code Beauté est né d'une passion dévorante pour l'univers des fragrances. Pour moi, un parfum n'est pas un simple accessoire : c'est une signature invisible, un souvenir que l'on laisse dans une pièce, une émotion que l'on porte sur sa peau.</p>
+    
+    <h3>Le parfum : la tête de proue de Chogan</h3>
+    
+    <p>Quand j'ai découvert Chogan, c'est d'abord par leurs fragrances que j'ai été conquise. Chogan s'est bâti une réputation d'excellence dans le monde de la parfumerie grâce à un savoir-faire unique : recréer l'âme des plus grandes icônes de la parfumerie internationale avec une qualité Made in Italy irréprochable.</p>
+    
+    <p>Ce qui m'a bluffée ? La tenue. La qualité des matières premières. Le fait de retrouver toute la profondeur et la complexité de parfums iconiques, mais à un prix juste, sans le marketing superflu des grandes maisons.</p>
+    
+    <p>Chez Chogan, le parfum n'est pas une copie : c'est une interprétation fidèle et généreuse. Des notes fraîches et pétillantes aux fragrances orientales et sensuelles, il y a une signature olfactive pour chaque personnalité, chaque moment de vie, chaque humeur.</p>
+    
+    <p>Et c'est là que Code Beauté prend tout son sens. Grâce à mon diagnostic parfum personnalisé, je vous aide à déchiffrer votre propre code olfactif. En quelques questions, nous trouvons ensemble LA fragrance qui vous correspond vraiment.</p>
+    
+    <h3>Et bien plus que des parfums...</h3>
+    
+    <p>Si Chogan excelle dans l'art du parfum, la marque ne s'arrête pas là. Une fois que l'on a trouvé la fragrance qui nous sublime, on a envie que tout le reste suive : une peau éclatante, un teint lumineux, une énergie débordante.</p>
+    
+    <p>C'est pourquoi j'ai élargi mon expertise aux soins visage Aurodhea, formulés avec des actifs naturels puissants comme l'aloe vera, la bave d'escargot ou l'acide hyaluronique, pour des routines sur-mesure adaptées à chaque type de peau.</p>
+    
+    <p>Mon rôle est simple : vous guider vers les produits qui vous correspondent vraiment, sans vous perdre dans une offre trop vaste.</p>
+    
+    <div class="signature">
+      Manon<br>
+      Fondatrice de Code Beauté
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Me contacter</h2>
+    <div class="contact-buttons">
+      <a href="https://wa.me/33614086803" target="_blank" class="contact-btn whatsapp-btn">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://instagram.com/Mom_Alone2" target="_blank" class="contact-btn instagram-btn">
+        <i class="fab fa-instagram"></i> @Mom_Alone2
+      </a>
+    </div>
+    
+    <!-- RGPD -->
+    <div class="rgpd">
+      <i class="fas fa-shield-alt"></i>
+      <span><strong>Protection de vos données</strong> — Les informations collectées via les diagnostics sont strictement confidentielles et destinées uniquement à votre conseillère Code Beauté pour un accompagnement personnalisé. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour l'exercer, contactez-moi directement.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p class="footer-text">© 2024 Code Beauté - Manon | <a href="#">Accueil</a> | <a href="#about">À propos</a> | <a href="#diagnostics">Diagnostics</a></p>
+    <p class="legal">
+      Ce site est un espace personnel de conseillère partenaire Chogan. Il est indépendant du site officiel Chogan.<br>
+      Les diagnostics sont des outils d'aide à la recommandation.
+    </p>
+  </div>
+</footer>
+
+<!-- Script pour les modals et navigation mobile -->
+<script>
+  function openModal(type) {
+    document.getElementById('modal-' + type).style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(type) {
+    document.getElementById('modal-' + type).style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  // Fermer le modal en cliquant en dehors
+  window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+      event.target.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  // Mobile menu
+  document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+    alert('Menu : Accueil | À propos | Diagnostics | Contact\n\nUtilisez les liens de la page pour naviguer.');
+  });
+
+  // Smooth scroll pour les liens d'ancrage
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
