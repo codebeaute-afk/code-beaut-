@@ -682,10 +682,10 @@
 <!-- Header -->
 <header>
   <div class="container header-content">
-    <a href="#" class="logo" style="display: flex; align-items: center; gap: 12px;">
+    <a href="#" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
       <img 
         src="https://i.ibb.co/vxw5w2vW/Capture-d-e-cran-2026-04-15-a-12-20-33.png" 
-        alt="Code Beauté Logo" 
+        alt="Code Beauté" 
         style="height: 45px; width: auto;"
       />
       <span style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; letter-spacing: 2px; color: #D4A59A;">Code Beauté</span>
@@ -705,6 +705,7 @@
     </button>
   </div>
 </header>
+
 <!-- Hero Section -->
 <section class="hero">
   <div class="container">
@@ -913,4 +914,128 @@
           <span>Les parfums Chogan tiennent-ils vraiment ?</span>
           <i class="fas fa-chevron-down"></i>
         </div>
-        <div class="faq-answer"><p>Oui ! C'est ce qui m
+        <div class="faq-answer"><p>Oui ! C'est ce qui m'a bluffée en premier. Les parfums Chogan sont fabriqués en Italie avec une haute concentration en essences. La tenue est excellente (6 à 8h en moyenne). Faites le diagnostic parfum pour trouver votre signature !</p></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Proposez-vous des échantillons ?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer"><p>Je propose régulièrement des échantillons lors de mes ateliers ou sur demande. Contactez-moi sur WhatsApp pour savoir ce qui est disponible en ce moment !</p></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Comment rejoindre votre équipe ?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer"><p>Cliquez sur "Me contacter" dans la section "Rejoignez mon équipe" ci-dessus. Nous échangerons sur vos envies, je vous expliquerai le fonctionnement et les avantages. Aucun engagement, juste une discussion !</p></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Où se déroulent les ateliers ?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer"><p>Les ateliers ont lieu principalement dans les Yvelines (78) et alentours (Versailles, Saint-Germain-en-Laye, Rambouillet...). Je peux également me déplacer à domicile pour des ateliers privés (minimum 4 personnes).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Calendrier Ateliers -->
+<section id="workshops" class="workshops">
+  <div class="container">
+    <h2><i class="fas fa-calendar-alt"></i> Réservez un atelier</h2>
+    <p class="workshops-sub">
+      <i class="fas fa-map-pin"></i> Yvelines (78) et alentours 
+      <i class="fas fa-users" style="margin-left: 15px;"></i> À domicile ou en petit groupe
+    </p>
+    <div class="calendar-container">
+      <iframe 
+        src="https://calendly.com/manon-bonnette/30min" 
+        class="calendar-iframe"
+        title="Calendrier de réservation des ateliers Code Beauté">
+      </iframe>
+      <p class="calendar-note">
+        <i class="fas fa-info-circle"></i> Choisissez un créneau qui vous convient. Je confirmerai le lieu exact par WhatsApp après réservation.
+      </p>
+    </div>
+    <p style="text-align: center; margin-top: 30px;">
+      <a href="https://wa.me/33614086803?text=Bonjour%20Manon%2C%20je%20souhaite%20des%20informations%20sur%20les%20ateliers%20!" target="_blank" class="btn btn-secondary">
+        <i class="fab fa-whatsapp"></i> Question sur les ateliers ?
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Me contacter</h2>
+    <div class="contact-buttons">
+      <a href="https://wa.me/33614086803" target="_blank" class="contact-btn whatsapp-btn">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://instagram.com/Mom_Alone2" target="_blank" class="contact-btn instagram-btn">
+        <i class="fab fa-instagram"></i> @Mom_Alone2
+      </a>
+      <a href="#boutique" class="contact-btn shop-btn">
+        <i class="fas fa-shopping-bag"></i> Boutique
+      </a>
+    </div>
+    <div class="rgpd">
+      <i class="fas fa-shield-alt"></i>
+      <span><strong>Protection de vos données</strong> — Les informations collectées sont strictement confidentielles. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p class="footer-text">© 2025 Code Beauté - Manon | <a href="#">Accueil</a> | <a href="#about">À propos</a> | <a href="#join">Rejoindre</a> | <a href="#faq">FAQ</a></p>
+    <p class="legal">
+      Ce site est un espace personnel de conseillère partenaire Chogan. Indépendant du site officiel.<br>
+      Les diagnostics sont des outils d'aide à la recommandation.
+    </p>
+  </div>
+</footer>
+
+<script>
+  function openModal(type) {
+    document.getElementById('modal-' + type).style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(type) {
+    document.getElementById('modal-' + type).style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+      event.target.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  };
+
+  function toggleFaq(element) {
+    element.classList.toggle('active');
+  }
+
+  document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+    alert('Menu : Accueil | À propos | Diagnostics | Boutique | Rejoindre | FAQ | Ateliers | Contact');
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
