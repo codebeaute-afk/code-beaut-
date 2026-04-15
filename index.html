@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>Code Beauté - Manon | Conseillère Chogan</title>
-  <meta name="description" content="Déchiffrez votre code beauté avec Manon, conseillère Chogan. Diagnostics parfum et visage personnalisés. Soins d'exception Made in Italy.">
+  <meta name="description" content="Déchiffrez votre code beauté avec Manon, conseillère Chogan. Diagnostics parfum et visage personnalisés. Rejoignez mon équipe ou réservez un atelier.">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23D4A59A'/%3E%3Ctext x='50' y='70' font-size='50' text-anchor='middle' fill='white' font-family='serif'%3ECB%3C/text%3E%3C/svg%3E">
@@ -48,7 +48,7 @@
     header {
       padding: 20px 0;
       border-bottom: 1px solid rgba(212, 165, 154, 0.2);
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(8px);
       position: sticky;
       top: 0;
@@ -63,7 +63,7 @@
 
     .logo {
       font-family: 'Playfair Display', serif;
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 400;
       letter-spacing: 2px;
       color: #D4A59A;
@@ -78,14 +78,15 @@
 
     .nav-links {
       display: flex;
-      gap: 32px;
+      gap: 24px;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
       text-decoration: none;
       color: #5A5A5A;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 15px;
       transition: color 0.2s;
       cursor: pointer;
     }
@@ -125,7 +126,6 @@
       color: #D4A59A;
       margin-bottom: 8px;
       font-weight: 400;
-      letter-spacing: 1px;
     }
 
     .hero .subtitle {
@@ -163,34 +163,49 @@
       box-shadow: 0 10px 25px rgba(212, 165, 154, 0.3);
     }
 
+    .btn-secondary {
+      background-color: transparent;
+      color: #D4A59A;
+    }
+
+    .btn-secondary:hover {
+      background-color: #D4A59A;
+      color: white;
+    }
+
+    .btn-shop {
+      background-color: #C28B7B;
+      border-color: #C28B7B;
+    }
+
     /* Features */
     .features {
       padding: 60px 0;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
       text-align: center;
     }
 
     .feature {
-      padding: 30px 20px;
+      padding: 20px 15px;
     }
 
     .feature i {
-      font-size: 36px;
+      font-size: 32px;
       color: #D4A59A;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .feature h3 {
-      font-size: 20px;
-      margin-bottom: 12px;
+      font-size: 18px;
+      margin-bottom: 10px;
       color: #3E3E3E;
     }
 
     .feature p {
       color: #8B8B8B;
-      font-size: 15px;
+      font-size: 14px;
     }
 
     /* Diagnostics Section */
@@ -259,11 +274,7 @@
       font-size: 16px;
     }
 
-    .diag-card .btn {
-      margin-top: 10px;
-    }
-
-    /* Modal pour les diagnostics */
+    /* Modal */
     .modal {
       display: none;
       position: fixed;
@@ -288,7 +299,6 @@
       display: flex;
       flex-direction: column;
       margin-top: 40px;
-      box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
     }
 
     .modal-header {
@@ -311,12 +321,6 @@
       font-size: 28px;
       color: #D4A59A;
       cursor: pointer;
-      padding: 0 8px;
-      transition: color 0.2s;
-    }
-
-    .close-modal:hover {
-      color: #C28B7B;
     }
 
     .modal-body {
@@ -358,7 +362,6 @@
     .about p {
       margin-bottom: 20px;
       color: #5A5A5A;
-      font-size: 16px;
     }
 
     .signature {
@@ -370,12 +373,172 @@
       font-family: 'Playfair Display', serif;
     }
 
+    /* Rejoindre mon équipe Section */
+    .join-team {
+      padding: 80px 0;
+      background-color: #F8F5F2;
+      border-radius: 60px;
+      margin: 40px 0;
+    }
+
+    .join-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .join-content h2 {
+      font-size: 32px;
+      color: #D4A59A;
+      margin-bottom: 20px;
+    }
+
+    .join-content h2 i {
+      margin-right: 10px;
+    }
+
+    .join-content p {
+      margin-bottom: 25px;
+      color: #5A5A5A;
+      font-size: 18px;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .benefit {
+      text-align: center;
+    }
+
+    .benefit i {
+      font-size: 36px;
+      color: #D4A59A;
+      margin-bottom: 15px;
+    }
+
+    .benefit h4 {
+      margin-bottom: 10px;
+      color: #3E3E3E;
+    }
+
+    /* FAQ Section */
+    .faq {
+      padding: 60px 0;
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #D4A59A;
+      margin-bottom: 40px;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 15px;
+      padding: 20px 25px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+      border: 1px solid rgba(212, 165, 154, 0.15);
+      cursor: pointer;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      color: #3E3E3E;
+    }
+
+    .faq-question i {
+      color: #D4A59A;
+      transition: transform 0.3s;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      color: #6B6B6B;
+      padding-right: 30px;
+    }
+
+    .faq-answer p {
+      padding-top: 15px;
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+    }
+
+    /* Calendrier Ateliers Section */
+    .workshops {
+      padding: 60px 0;
+      background-color: #F8F5F2;
+      border-radius: 60px;
+      margin: 40px 0;
+    }
+
+    .workshops h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #D4A59A;
+      margin-bottom: 15px;
+    }
+
+    .workshops-sub {
+      text-align: center;
+      color: #8B8B8B;
+      margin-bottom: 40px;
+      font-size: 18px;
+    }
+
+    .workshops-sub i {
+      color: #D4A59A;
+      margin: 0 5px;
+    }
+
+    .calendar-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .calendar-iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 16px;
+    }
+
+    .calendar-note {
+      text-align: center;
+      margin-top: 20px;
+      color: #8B8B8B;
+      font-size: 14px;
+    }
+
     /* Contact Section */
     .contact {
       padding: 60px 0;
-      background-color: #F8F5F2;
       text-align: center;
-      border-radius: 0 0 60px 60px;
     }
 
     .contact h2 {
@@ -406,21 +569,6 @@
       border: 1px solid rgba(212, 165, 154, 0.2);
     }
 
-    .contact-btn i {
-      font-size: 22px;
-      color: #D4A59A;
-    }
-
-    .contact-btn:hover {
-      background: #D4A59A;
-      color: white;
-      transform: translateY(-3px);
-    }
-
-    .contact-btn:hover i {
-      color: white;
-    }
-
     .whatsapp-btn {
       background: #25D366;
       color: white;
@@ -431,18 +579,16 @@
       color: white;
     }
 
-    .whatsapp-btn:hover {
-      background: #128C7E;
-    }
-
     .instagram-btn {
       background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
       color: white;
       border: none;
     }
 
-    .instagram-btn i {
+    .shop-btn {
+      background: #D4A59A;
       color: white;
+      border-color: #D4A59A;
     }
 
     /* Footer */
@@ -469,7 +615,6 @@
       color: #A0A0A0;
     }
 
-    /* RGPD */
     .rgpd {
       max-width: 600px;
       margin: 20px auto 0;
@@ -481,13 +626,6 @@
       display: flex;
       align-items: flex-start;
       gap: 12px;
-    }
-
-    .rgpd i {
-      color: #D4A59A;
-      font-size: 16px;
-      flex-shrink: 0;
-      margin-top: 2px;
     }
 
     /* Responsive */
@@ -504,20 +642,15 @@
         font-size: 36px;
       }
 
-      .hero .subtitle {
-        font-size: 18px;
-      }
-
-      .hero .tagline {
-        font-size: 20px;
-      }
-
       .features {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .cards-container {
+        grid-template-columns: 1fr;
+      }
+
+      .benefits {
         grid-template-columns: 1fr;
       }
 
@@ -530,28 +663,16 @@
         padding: 0 20px;
       }
 
-      .about h2 {
-        font-size: 28px;
-      }
-
-      .contact-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .contact-btn {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-      }
-
       .modal-content {
         margin-top: 20px;
-        border-radius: 16px 16px 0 0;
       }
 
       .modal-body iframe {
         min-height: 500px;
+      }
+
+      .calendar-iframe {
+        height: 500px;
       }
     }
   </style>
@@ -568,6 +689,10 @@
       <a href="#">Accueil</a>
       <a href="#about">À propos</a>
       <a href="#diagnostics">Diagnostics</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#join">Rejoindre</a>
+      <a href="#faq">FAQ</a>
+      <a href="#workshops">Ateliers</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="mobile-menu-btn">
@@ -592,17 +717,22 @@
   <div class="feature">
     <i class="fas fa-flask"></i>
     <h3>Expertise Chogan</h3>
-    <p>Des formulations d'exception Made in Italy</p>
+    <p>Made in Italy</p>
   </div>
   <div class="feature">
     <i class="fas fa-heart"></i>
-    <h3>Conseils personnalisés</h3>
-    <p>Une approche sur-mesure pour votre beauté</p>
+    <h3>Conseils</h3>
+    <p>Sur-mesure</p>
   </div>
   <div class="feature">
-    <i class="fas fa-leaf"></i>
-    <h3>Produits naturels</h3>
-    <p>Des actifs nobles pour votre peau</p>
+    <i class="fas fa-users"></i>
+    <h3>Équipe</h3>
+    <p>Rejoignez-moi</p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-calendar"></i>
+    <h3>Ateliers</h3>
+    <p>78 & alentours</p>
   </div>
 </section>
 
@@ -618,19 +748,19 @@
         <i class="fas fa-spray-can-sparkles"></i>
         <h3>Diagnostic Parfum</h3>
         <p>Trouvez votre signature olfactive parmi les fragrances iconiques Chogan.</p>
-        <span class="btn">Commencer le test <i class="fas fa-arrow-right"></i></span>
+        <span class="btn">Commencer <i class="fas fa-arrow-right"></i></span>
       </div>
       <div class="diag-card" onclick="openModal('peau')">
         <i class="fas fa-droplet"></i>
         <h3>Diagnostic Visage</h3>
         <p>Obtenez votre routine visage personnalisée selon votre type de peau.</p>
-        <span class="btn">Commencer le test <i class="fas fa-arrow-right"></i></span>
+        <span class="btn">Commencer <i class="fas fa-arrow-right"></i></span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Modal Parfum -->
+<!-- Modals -->
 <div id="modal-parfum" class="modal">
   <div class="modal-content">
     <div class="modal-header">
@@ -643,7 +773,6 @@
   </div>
 </div>
 
-<!-- Modal Peau -->
 <div id="modal-peau" class="modal">
   <div class="modal-content">
     <div class="modal-header">
@@ -660,31 +789,124 @@
 <section id="about" class="about">
   <div class="container about-content">
     <h2>Qui se cache derrière Code Beauté ?</h2>
-    
-    <p>Je m'appelle Manon, et Code Beauté est né d'une passion dévorante pour l'univers des fragrances. Pour moi, un parfum n'est pas un simple accessoire : c'est une signature invisible, un souvenir que l'on laisse dans une pièce, une émotion que l'on porte sur sa peau.</p>
-    
+    <p>Je m'appelle Manon, et Code Beauté est né d'une passion dévorante pour l'univers des fragrances. Pour moi, un parfum n'est pas un simple accessoire : c'est une signature invisible, une émotion que l'on porte sur sa peau.</p>
     <h3>Le parfum : la tête de proue de Chogan</h3>
-    
-    <p>Quand j'ai découvert Chogan, c'est d'abord par leurs fragrances que j'ai été conquise. Chogan s'est bâti une réputation d'excellence dans le monde de la parfumerie grâce à un savoir-faire unique : recréer l'âme des plus grandes icônes de la parfumerie internationale avec une qualité Made in Italy irréprochable.</p>
-    
-    <p>Ce qui m'a bluffée ? La tenue. La qualité des matières premières. Le fait de retrouver toute la profondeur et la complexité de parfums iconiques, mais à un prix juste, sans le marketing superflu des grandes maisons.</p>
-    
-    <p>Chez Chogan, le parfum n'est pas une copie : c'est une interprétation fidèle et généreuse. Des notes fraîches et pétillantes aux fragrances orientales et sensuelles, il y a une signature olfactive pour chaque personnalité, chaque moment de vie, chaque humeur.</p>
-    
-    <p>Et c'est là que Code Beauté prend tout son sens. Grâce à mon diagnostic parfum personnalisé, je vous aide à déchiffrer votre propre code olfactif. En quelques questions, nous trouvons ensemble LA fragrance qui vous correspond vraiment.</p>
-    
-    <h3>Et bien plus que des parfums...</h3>
-    
-    <p>Si Chogan excelle dans l'art du parfum, la marque ne s'arrête pas là. Une fois que l'on a trouvé la fragrance qui nous sublime, on a envie que tout le reste suive : une peau éclatante, un teint lumineux, une énergie débordante.</p>
-    
-    <p>C'est pourquoi j'ai élargi mon expertise aux soins visage Aurodhea, formulés avec des actifs naturels puissants comme l'aloe vera, la bave d'escargot ou l'acide hyaluronique, pour des routines sur-mesure adaptées à chaque type de peau.</p>
-    
-    <p>Mon rôle est simple : vous guider vers les produits qui vous correspondent vraiment, sans vous perdre dans une offre trop vaste.</p>
-    
-    <div class="signature">
-      Manon<br>
-      Fondatrice de Code Beauté
+    <p>Quand j'ai découvert Chogan, c'est d'abord par leurs fragrances que j'ai été conquise. Chogan s'est bâti une réputation d'excellence grâce à un savoir-faire unique : recréer l'âme des plus grandes icônes de la parfumerie avec une qualité Made in Italy irréprochable.</p>
+    <p>Ce qui m'a bluffée ? La tenue. La qualité des matières premières. Le fait de retrouver toute la profondeur et la complexité de parfums iconiques, mais à un prix juste.</p>
+    <div class="signature">Manon<br>Fondatrice de Code Beauté</div>
+  </div>
+</section>
+
+<!-- Boutique / Lien Affilié -->
+<section id="boutique" style="padding: 60px 0; text-align: center;">
+  <div class="container">
+    <h2 style="font-size: 32px; color: #D4A59A; margin-bottom: 20px;">
+      <i class="fas fa-shopping-bag" style="margin-right: 10px;"></i> La Boutique Chogan
+    </h2>
+    <p style="margin-bottom: 30px; color: #5A5A5A; font-size: 18px;">Découvrez tous les produits Chogan via mon lien partenaire.</p>
+    <a href="https://chogan.com" target="_blank" class="btn btn-shop" style="font-size: 18px; padding: 16px 40px;">
+      Accéder à la boutique <i class="fas fa-external-link-alt" style="margin-left: 10px;"></i>
+    </a>
+    <p style="margin-top: 20px; font-size: 14px; color: #A0A0A0;">Lien affilié - Merci pour votre soutien 💕</p>
+  </div>
+</section>
+
+<!-- Rejoindre mon équipe -->
+<section id="join" class="join-team">
+  <div class="container join-content">
+    <h2><i class="fas fa-users"></i> Rejoignez mon équipe</h2>
+    <p>Vous aimez les produits Chogan et souhaitez développer votre propre activité ? Rejoignez-moi dans l'aventure Code Beauté !</p>
+    <div class="benefits">
+      <div class="benefit">
+        <i class="fas fa-euro-sign"></i>
+        <h4>Revenus complémentaires</h4>
+        <p>Commissions attractives</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-clock"></i>
+        <h4>Flexibilité totale</h4>
+        <p>À votre rythme</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-graduation-cap"></i>
+        <h4>Formation offerte</h4>
+        <p>Je vous accompagne</p>
+      </div>
     </div>
+    <p style="margin: 30px 0;"><i>Intéressée ? Parlons-en !</i></p>
+    <a href="https://wa.me/33614086803?text=Bonjour%20Manon%2C%20je%20suis%20int%C3%A9ress%C3%A9e%20pour%20rejoindre%20ton%20%C3%A9quipe%20Code%20Beaut%C3%A9%20!" target="_blank" class="btn" style="background: #25D366;">
+      <i class="fab fa-whatsapp"></i> Me contacter pour en savoir plus
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq">
+  <div class="container">
+    <h2><i class="fas fa-question-circle" style="margin-right: 10px;"></i> Questions Fréquentes</h2>
+    <div class="faq-container">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Comment passer commande ?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer"><p>Il vous suffit de cliquer sur "Accéder à la boutique" dans la section Boutique ci-dessus. Vous serez redirigée vers le site Chogan avec mon code partenaire. Ajoutez vos produits au panier et finalisez votre commande. Je reste disponible pour vous conseiller !</p></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Les parfums Chogan tiennent-ils vraiment ?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer"><p>Oui ! C'est ce qui m'a bluffée en premier. Les parfums Chogan sont fabriqués en Italie avec une haute concentration en essences. La tenue est excellente (6 à 8h en moyenne). Faites le diagnostic parfum pour trouver votre signature !</p></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Proposez-vous des échantillons ?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer"><p>Je propose régulièrement des échantillons lors de mes ateliers ou sur demande. Contactez-moi sur WhatsApp pour savoir ce qui est disponible en ce moment !</p></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Comment rejoindre votre équipe ?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer"><p>Cliquez sur "Me contacter" dans la section "Rejoignez mon équipe" ci-dessus. Nous échangerons sur vos envies, je vous expliquerai le fonctionnement et les avantages. Aucun engagement, juste une discussion !</p></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Où se déroulent les ateliers ?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer"><p>Les ateliers ont lieu principalement dans les Yvelines (78) et alentours (Versailles, Saint-Germain-en-Laye, Rambouillet...). Je peux également me déplacer à domicile pour des ateliers privés (minimum 4 personnes).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Calendrier Ateliers -->
+<section id="workshops" class="workshops">
+  <div class="container">
+    <h2><i class="fas fa-calendar-alt"></i> Réservez un atelier</h2>
+    <p class="workshops-sub">
+      <i class="fas fa-map-pin"></i> Yvelines (78) et alentours 
+      <i class="fas fa-users" style="margin-left: 15px;"></i> À domicile ou en petit groupe
+    </p>
+    <div class="calendar-container">
+      <iframe 
+        src="https://calendly.com/ton-lien-calendly" 
+        class="calendar-iframe"
+        title="Calendrier de réservation des ateliers Code Beauté">
+      </iframe>
+      <p class="calendar-note">
+        <i class="fas fa-info-circle"></i> Choisissez un créneau qui vous convient. Je confirmerai le lieu exact par WhatsApp après réservation.
+      </p>
+    </div>
+    <p style="text-align: center; margin-top: 30px;">
+      <a href="https://wa.me/33614086803?text=Bonjour%20Manon%2C%20je%20souhaite%20des%20informations%20sur%20les%20ateliers%20!" target="_blank" class="btn btn-secondary">
+        <i class="fab fa-whatsapp"></i> Question sur les ateliers ?
+      </a>
+    </p>
   </div>
 </section>
 
@@ -699,12 +921,13 @@
       <a href="https://instagram.com/Mom_Alone2" target="_blank" class="contact-btn instagram-btn">
         <i class="fab fa-instagram"></i> @Mom_Alone2
       </a>
+      <a href="#boutique" class="contact-btn shop-btn">
+        <i class="fas fa-shopping-bag"></i> Boutique
+      </a>
     </div>
-    
-    <!-- RGPD -->
     <div class="rgpd">
       <i class="fas fa-shield-alt"></i>
-      <span><strong>Protection de vos données</strong> — Les informations collectées via les diagnostics sont strictement confidentielles et destinées uniquement à votre conseillère Code Beauté pour un accompagnement personnalisé. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour l'exercer, contactez-moi directement.</span>
+      <span><strong>Protection de vos données</strong> — Les informations collectées sont strictement confidentielles. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression.</span>
     </div>
   </div>
 </section>
@@ -712,15 +935,14 @@
 <!-- Footer -->
 <footer>
   <div class="container">
-    <p class="footer-text">© 2024 Code Beauté - Manon | <a href="#">Accueil</a> | <a href="#about">À propos</a> | <a href="#diagnostics">Diagnostics</a></p>
+    <p class="footer-text">© 2025 Code Beauté - Manon | <a href="#">Accueil</a> | <a href="#about">À propos</a> | <a href="#join">Rejoindre</a> | <a href="#faq">FAQ</a></p>
     <p class="legal">
-      Ce site est un espace personnel de conseillère partenaire Chogan. Il est indépendant du site officiel Chogan.<br>
+      Ce site est un espace personnel de conseillère partenaire Chogan. Indépendant du site officiel.<br>
       Les diagnostics sont des outils d'aide à la recommandation.
     </p>
   </div>
 </footer>
 
-<!-- Script pour les modals et navigation mobile -->
 <script>
   function openModal(type) {
     document.getElementById('modal-' + type).style.display = 'block';
@@ -732,30 +954,6 @@
     document.body.style.overflow = 'auto';
   }
 
-  // Fermer le modal en cliquant en dehors
   window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
-      event.target.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-  }
-
-  // Mobile menu
-  document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-    alert('Menu : Accueil | À propos | Diagnostics | Contact\n\nUtilisez les liens de la page pour naviguer.');
-  });
-
-  // Smooth scroll pour les liens d'ancrage
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-</script>
-
-</body>
-</html>
+      event.target.style.display = 'none
